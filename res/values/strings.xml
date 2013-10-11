@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExampleLayout</string>
+    <string name="reminder">reminder</string>
+    <string name="relativeLayout">done</string>
+    <string name="login_lbUserName">UserName:</string>
+    <string name="login_lbPassWord">PassWord</string>
+    <string name="login_btLogin">Login</string>
+    <string name="profile_tvHello">Hi</string>
+    <string name="profile_descriptionAvatar">description of avatar</string>
+    <string name="tv_address">Address:</string>
+</resources>

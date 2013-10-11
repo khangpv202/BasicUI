@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:background="@color/gray"
+                android:paddingRight="5dp">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_tvHello"
+            android:id="@+id/tvHello"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="12dp"
+            android:background="@color/gray"
+            android:textColor="@color/red"
+            android:id="@+id/button"
+            android:onClick="logOut"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+    <ImageView
+            android:layout_width="90dp"
+            android:layout_height="67dp"
+            android:id="@+id/ivAvata"
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="@string/profile_descriptionAvatar"
+            android:layout_alignParentLeft="true" android:layout_below="@+id/button"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_address"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/tvAddress"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="85dp" android:layout_below="@+id/tvHello"
+            android:layout_toRightOf="@+id/ivAvata"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birthday:"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:id="@+id/tvBirthDay"
+            android:layout_alignLeft="@+id/tvAddress" android:layout_below="@+id/tvAddress"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Online:"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:id="@+id/tvOnline"
+            android:layout_alignLeft="@+id/tvAddress" android:layout_below="@+id/tvBirthDay"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:id="@+id/tvGender"
+            android:layout_alignLeft="@+id/tvAddress" android:layout_below="@+id/tvOnline"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show list friends"
+            android:textColor="@color/black"
+            android:id="@+id/cbShowListFriends"
+            android:checked="false" android:layout_alignParentRight="false" android:layout_below="@+id/ivAvata"/>
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="290dp"
+            android:id="@+id/lvFriendLists"
+            android:visibility="invisible"
+            android:layout_below="@+id/cbShowListFriends"/>
+
+
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/addressList"
+            android:visibility="invisible"
+            android:id="@+id/spAddressList"
+            />
+    <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_toRightOf="@+id/ivAvata"
+            android:id="@+id/rgGender"
+            android:visibility="gone"
+            android:background="@color/gray"
+            android:layout_below="@+id/tvGender">
+
+        <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/black"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/rbMale" android:checked="false"/>
+        <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="@color/black"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/rbFemale" android:checked="false"/>
+    </RadioGroup>
+    <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dpDateBirthday"
+            android:visibility="gone"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true"/>
+    <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/tpTimeOnline" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

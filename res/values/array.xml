@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="addressList">
+        <item>Ha Noi</item>
+        <item>Ha Nam</item>
+        <item>Ha Tsy</item>
+        <item>Quang Nam</item>
+        <item>Quang Ninh</item>
+        <item>Bac Ninh</item>
+    </string-array>
+</resources>
